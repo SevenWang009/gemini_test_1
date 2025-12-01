@@ -10,7 +10,7 @@ export const getCoachingAdvice = async (rank: string, recentLoss: boolean): Prom
 
     const response = await ai.models.generateContent({
       model: 'gemini-2.5-flash',
-      contents: prompt, // 输入
+      contents: prompt,
     });
 
     return response.text || "调整心态，休息也是变强的一部分。";
