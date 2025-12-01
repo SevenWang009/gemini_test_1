@@ -138,7 +138,7 @@ export default function App() {
         try {
           const imported = JSON.parse(event.target?.result as string);
           if (Array.isArray(imported)) {
-             if(confirm(`发现 ${imported.length} 条账号数据。是否覆盖当前数据？(取消则为合并)`)) {
+             if(confirm(`发现 ${imported.length} 条账号数据。是否覆盖当前数据？(取消则进行合并)`)) {
                 setAccounts(imported);
              } else {
                 const currentIds = new Set(accounts.map(a => a.id));
